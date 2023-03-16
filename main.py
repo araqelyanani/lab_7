@@ -43,7 +43,6 @@ time = np.array(time, float)
 a = np.array(a, float)
 b = np.array(b, float)
 
-
 fig = plt.figure()
 ax = fig.add_subplot()
 ax.set(title='Зависимости от времени', xlabel='Время, с', ylabel='Положение дроссельной заслонки (%)')
@@ -60,7 +59,6 @@ a_jitter = a + noise
 
 fig2 = plt.figure()
 ax2 = fig2.add_subplot()
-
 ax2.set(title='График корреляции', xlabel='Положение дроссельной заслонки (%)', ylabel='Массовый расход воздуха (кг\ч)')
 ax2.plot(a_jitter, b, 'o', alpha=0.3, markersize = 4)
 plt.show()
@@ -75,7 +73,6 @@ ax = figure.add_subplot(111, projection='3d')
 ax.plot(x, y, z, color='salmon')
 plt.show()
 
-
 # дополнительное задание
 def sin(i):
     line.set_ydata(np.sin(x + i / 10.0))
@@ -88,7 +85,6 @@ fig, ax = plt.subplots()
 line, = ax.plot(x, y,  color='green')
 
 animate = FuncAnimation(fig, sin, frames=100, interval=50)
-
 plt.show()
 
 writer = PillowWriter(fps=25)

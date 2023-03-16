@@ -56,8 +56,8 @@ ax1.set(ylabel='Часовой расход топлива (л\час)')
 ax1.plot(time, b, color='green')
 ax1.legend('2')
 
-noise = np.random.normal(0, 0.3, size=len(a))
-a_jitter = a + noise
+n = np.random.normal(0, 0.3, size=len(a))
+a_jitter = a + n
 
 # график корреляции
 fig2 = plt.figure()

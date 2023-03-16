@@ -52,7 +52,7 @@ ax.legend('1')
 
 # второй график
 ax1 = ax.twinx()
-ax1.set(ylabel='Массовый расход воздуха (кг\ч)')
+ax1.set(ylabel='Часовой расход топлива (л\час)')
 ax1.plot(time, b, color='green')
 ax1.legend('2')
 
@@ -62,7 +62,7 @@ a_jitter = a + noise
 # график корреляции
 fig2 = plt.figure()
 ax2 = fig2.add_subplot()
-ax2.set(title='График корреляции', xlabel='Положение дроссельной заслонки (%)', ylabel='Массовый расход воздуха (кг\ч)')
+ax2.set(title='График корреляции', xlabel='Положение дроссельной заслонки (%)', ylabel='Часовой расход топлива (л\час)')
 ax2.plot(a_jitter, b, 'o', alpha=0.3, markersize = 4)
 plt.show()
 

@@ -43,12 +43,14 @@ time = np.array(time, float)
 a = np.array(a, float)
 b = np.array(b, float)
 
+# первый график
 fig = plt.figure()
 ax = fig.add_subplot()
 ax.set(title='Зависимости от времени', xlabel='Время, с', ylabel='Положение дроссельной заслонки (%)')
 ax.plot(time, a, color='pink')
 ax.legend('1')
 
+# второй график
 ax1 = ax.twinx()
 ax1.set(ylabel='Массовый расход воздуха (кг\ч)')
 ax1.plot(time, b, color='green')
@@ -57,6 +59,7 @@ ax1.legend('2')
 noise = np.random.normal(0, 0.3, size=len(a))
 a_jitter = a + noise
 
+# график корреляции
 fig2 = plt.figure()
 ax2 = fig2.add_subplot()
 ax2.set(title='График корреляции', xlabel='Положение дроссельной заслонки (%)', ylabel='Массовый расход воздуха (кг\ч)')
